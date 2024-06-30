@@ -2,7 +2,7 @@ import OpenAI from 'openai';
 import { OpenAIStream, StreamingTextResponse } from 'ai';
 
 const openai = new OpenAI({
-    ...(process.env.OPENAI_KEY && { baseURL: process.env.OPENAI_KEY }),
+    ...(process.env.OPENAI_KEY && { apiKey: process.env.OPENAI_KEY }),
     ...(process.env.BASE_URL && { baseURL: process.env.BASE_URL }),
 });
 
